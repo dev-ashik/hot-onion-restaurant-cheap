@@ -1,0 +1,31 @@
+.logo2{
+    width: 100px;
+}
+
+.login-signUp a{
+    margin-right: 10px;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.redButton{
+    background-color: red;
+    border-radius: 20px;
+    border: none;
+}
+
+.searchBox{
+    border-radius: 20px;
+    border: none;
+}
+
+.bannerbackground{
+    text-align: center;
+    padding-top: 50px;
+
+    background-image: url("../../images/bannerbackground2.png");
+    background-position: left;
+    height: 300px;
+
+}
+
