@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo2 from '../../images/logo2.png';
 import './Header.css'
-import { Navbar, Nav, NavDropdown, Form,  FormControl, Button, Table, Tab, Tabs} from 'react-bootstrap';
+import { Navbar} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Breakfast from '../../fakedata/Fakefood'
+// import lunchMenu from '../../fakedata/Lunch'
+// import Dinner from '../../fakedata/Dinner'
+// import Home from '../Home/Home';
+// import Foodmenu from '../Foodmenu/Foodmenu';
+// import BreakfastMenu from '../../fakedata/Breakfast';
 
 const Header = () => {
+    
+
+    
+
     return (
         <div>
             <Navbar>
@@ -24,6 +34,12 @@ const Header = () => {
                 <input className="searchBox" placeholder="Scarce food items" type="text" />
                 <button className="redButton">Scarch</button>
             </section>
+
+            
+            
+            
+            
+
         </div>
     );
 };

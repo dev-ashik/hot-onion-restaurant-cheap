@@ -24,8 +24,28 @@
     padding-top: 50px;
 
     background-image: url("../../images/bannerbackground2.png");
-    background-position: left;
+    background-repeat: no-repeat;
+    
+    /* height: 40vw; */
     height: 300px;
+    background-size: cover;
+    background-position: 100% 0%;
+    width: 100%;
 
 }
+
+.food-list-ancor{
+    text-align: center;
+    padding: 30px;
+}
+
+.food-list-ancor a{
+    color: black;
+    margin: 30px;
+    
+}
+
+
+
+
 
