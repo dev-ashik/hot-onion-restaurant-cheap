@@ -1,0 +1,19 @@
+.black-footer{
+    background-color: black;
+    margin-top: 20px;
+    height: 250px;
+    padding: 50px;
+}
+
+.black-footer img{
+    height: 30px;
+    /* padding-top: 20px; */
+}
+
+
+.footer-textColor{
+    color: white;
+}
+.grayColor{
+    color: gray;
+}

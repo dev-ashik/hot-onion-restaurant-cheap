@@ -11,6 +11,10 @@ import {
 import Foodmenu from './Component/Foodmenu/Foodmenu';
 import Fooddetail from './Component/Fooddetail/Fooddetail';
 import Notfound from './Component/Notfound/Notfound';
+import Footer from './Component/Footer/Footer'
+import Foodcheckout from './Component/Foodcheckout/Foodcheckout';
+import Blackfooter from './Component/Blackfooter/Blackfooter';
+import Login from './Component/Login/Login';
 
 
 
@@ -24,7 +28,6 @@ function App() {
       
       <Router>
         <Switch>
-          
           <Route path = "/currentfood">
               <Foodmenu></Foodmenu>
           </Route>
@@ -34,14 +37,21 @@ function App() {
           <Route exact path = "/">
               <Foodmenu></Foodmenu>
           </Route>
+          <Route path = '/checkout'>
+            <Foodcheckout></Foodcheckout>
+          </Route>
+          <Route path = '/login'>
+            <Login></Login>
+          </Route>
           <Route path = "*">
             <Notfound></Notfound>
           </Route>
-          
         </Switch>
-      </Router>      
+      </Router> 
+      {/* <Footer></Footer>  */}
+      <Blackfooter></Blackfooter>   
     </div>
   );
 }
-
+ 
 export default App;

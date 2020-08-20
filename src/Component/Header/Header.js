@@ -3,7 +3,7 @@ import logo2 from '../../images/logo2.png';
 import './Header.css'
 import { Navbar} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Breakfast from '../../fakedata/Fakefood'
+// import Breakfast from '../../fakedata/Fakefood'
 // import lunchMenu from '../../fakedata/Lunch'
 // import Dinner from '../../fakedata/Dinner'
 // import Home from '../Home/Home';
@@ -24,7 +24,7 @@ const Header = () => {
                 <Navbar.Text>
                     <div className="login-signUp">
                         <a href="">Login</a>
-                        <a className="redButton" href="">Sign up</a>
+                        <a className="redButton" style = {{color: "white"}} href="">Sign up</a>
                     </div>
                 </Navbar.Text>
                 </Navbar.Collapse>
@@ -34,10 +34,6 @@ const Header = () => {
                 <input className="searchBox" placeholder="Scarce food items" type="text" />
                 <button className="redButton">Scarch</button>
             </section>
-
-            
-            
-            
             
 
         </div>

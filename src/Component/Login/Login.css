@@ -1,0 +1,25 @@
+.signIn img{
+    height: 40px;
+}
+
+.signIn{
+    text-align: center;
+    margin: 50px;
+}
+
+.signIn input{
+    width: 300px;
+    background-color:lightgray;
+    padding-left: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.signIn-submitButton{
+    width: 300px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+}

@@ -22,6 +22,7 @@ const Currentfood = (props) => {
                 </div>
                 </Link>
             </section>
+            
         </div>
     );
 };

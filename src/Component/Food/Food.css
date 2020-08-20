@@ -1,0 +1,40 @@
+.foodDetail-sectain{
+    margin: 50px 60px;
+    padding: 30px 60px; 
+    height: 200px;
+    
+}
+
+.foodDetail-left{
+    float: left;
+    margin: 30px;
+    
+}
+
+.foodDetail-img{
+    float: left;
+}
+
+.plassMinus-button{
+    border: 1px solid gray;
+    
+    border-radius: 20px;
+    width: 80px;
+    /* float: left; */
+    margin: 10px;
+}
+
+
+.plassMinus-button button{
+    border: none;
+    background-color: white;
+}
+
+.black-button{
+    color: white;
+    background-color: gray;
+    border: none;
+    border-radius: 20px;
+}
+
+

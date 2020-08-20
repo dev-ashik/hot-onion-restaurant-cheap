@@ -1,0 +1,14 @@
+.review{
+    margin: 50px;
+    height: 600px;
+}
+
+.review-leftSide{
+    float: left;
+    margin: 20px;
+}
+
+.review-rightSide{
+    float: left;
+    margin: 20px;
+}

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import fakefoodMenu from '../../fakedata/Fakefood'
 import Currentfood from '../Currentfood/Currentfood';
+import './Foodmenu.css'
+import '../Header/Header.css'
+import { Link } from 'react-router-dom';
 
 const Foodmenu = () => {
     const allLunch = fakefoodMenu.filter(fakefood => fakefood.category === "lunch");
@@ -48,7 +51,16 @@ const Foodmenu = () => {
                 <button onClick={lunch}>Lunch</button>
                 <button onClick={dinner}>dinner</button>
             </div>
-            {currentfood.map(foods => <Currentfood foods = {foods}></Currentfood>)}
+
+
+            {currentfood.map(foods => <Currentfood key = {foods.key} foods = {foods}></Currentfood>)}
+
+
+            <div className = "checkoutButton-section">
+                <Link to = "checkout">
+                    <button className = "redButton">Checkout Your Food</button>
+                </Link>
+            </div>
         </div>
     );
 };
