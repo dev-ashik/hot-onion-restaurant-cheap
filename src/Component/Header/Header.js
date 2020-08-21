@@ -23,7 +23,8 @@ const Header = () => {
                 <Navbar.Collapse className="justify-content-end">
                 <Navbar.Text>
                     <div className="login-signUp">
-                        <a href="">Login</a>
+                        <a href="/currentfood">Foods</a>
+                        <a href="/login">Login</a>
                         <a className="redButton" style = {{color: "white"}} href="">Sign up</a>
                     </div>
                 </Navbar.Text>
