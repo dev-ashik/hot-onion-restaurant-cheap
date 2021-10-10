@@ -1,0 +1,70 @@
+.foodDetailSectain{
+    display: flex;
+    /* margin: 50px 60px; */
+    padding: 30px 60px; 
+    height: 200px;
+    
+}
+
+.foodDetailLeft{
+    margin: 30px;
+    margin-right: 70px;
+    /* width: 50%; */
+}
+
+.foodDetailImg{
+    margin-left: 80px;
+}
+
+.countDiv {
+    display: flex;
+}
+
+.plassMinusButton{
+    border: 1px solid gray;
+    border-radius: 20px;
+    width: 80px;
+    margin: 10px;
+    margin-top: 6px;
+    text-align: center;
+    /* margin-left: 0; */
+}
+
+
+.minusButton {
+    background-color: transparent;
+    border: none;
+}
+
+.minusButton:focus {
+    background-color: transparent;
+    outline: none;
+}
+
+
+.plassMinusButton button{
+    /* border: none;
+    background-color: white; */
+}
+
+.noneButton{
+    border: none;
+    color: white;
+    border-radius: 20px;
+    background-color: gray;
+    padding: 5px 20px;
+    cursor: default;
+}
+.noneButton:focus {
+    outline: none;
+}
+
+
+.addButton {
+    border: none;
+    color: white;
+    border-radius: 20px;
+    background-color: red;
+    padding: 5px 20px;
+}
+
