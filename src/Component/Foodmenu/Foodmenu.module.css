@@ -1,0 +1,33 @@
+.currentFood {
+    height: 580px;
+}
+
+.checkoutButtonSection{
+    text-align: center;
+    padding: 20px;
+    /* background-color: red; */
+    /* margin: 50px; */
+    
+}
+
+.checkoutButton {
+    border: none;
+    color: white;
+    border-radius: 20px;
+    background-color: red;
+    padding: 5px 20px;
+}
+
+.MenuButton {
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    margin: 5px 10px;
+    padding: 0;
+}
+
+.MenuButton:focus {
+    outline: none;
+}
+
+

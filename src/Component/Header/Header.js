@@ -31,9 +31,13 @@ const Header = () => {
                 </Navbar.Collapse>
             </Navbar>
             <section className="bannerbackground">
-                <h1>Best food waiting for you.</h1>
-                <input className="searchBox" placeholder="Scarce food items" type="text" />
-                <button className="redButton">Scarch</button>
+                <div className="poster_content">
+                    <h1>Best food waiting for you.</h1>
+                    <div className="searchBox">
+                        <input className="searchInputBox" placeholder="Scarce food items" type="text" />
+                        <button className="redButton">Scarch</button>
+                    </div>
+                </div>
             </section>
             
 

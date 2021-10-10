@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { addToDatabaseCart } from '../../utilities/databaseManager';
 
 const Food = (props) => {
-    const { foodName, detail, prise, key, url } = props.food;
+    const { foodName, detail, prise, id, photo } = props.food;
     const [count, setCount] = useState(1);
 
 
@@ -82,7 +82,7 @@ const Food = (props) => {
             </div>
 
             <div className = "foodDetail-img">
-                <img src={url} alt=""/>
+                <img src={photo} alt="food photo" height="200" width="200"/>
             </div>
             </section>
         </div>

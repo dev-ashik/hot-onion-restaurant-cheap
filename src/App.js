@@ -31,7 +31,7 @@ function App() {
           <Route path = "/currentfood">
               <Foodmenu></Foodmenu>
           </Route>
-          <Route path = "/food:foodKey">
+          <Route path = "/food/:foodId">
             <Fooddetail></Fooddetail>
           </Route>
           <Route exact path = "/">
@@ -49,7 +49,7 @@ function App() {
         </Switch>
       </Router> 
       {/* <Footer></Footer>  */}
-      <Blackfooter></Blackfooter>   
+      {/* <Blackfooter></Blackfooter>    */}
     </div>
   );
 }

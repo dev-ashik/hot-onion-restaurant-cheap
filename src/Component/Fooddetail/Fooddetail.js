@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import fakefoodMenu from '../../fakedata/Fakefood';
-import Food from '../Food/Food';
-import { findDOMNode } from 'react-dom';
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import fakefoodMenu from "../../fakedata/Fakefood";
+import Food from "../Food/Food";
 
 const Fooddetail = () => {
-    let {foodKey} = useParams();
-    const found = fakefoodMenu.find(element => element.key == foodKey);
+  let { foodId } = useParams();
+  const foundFood = fakefoodMenu.find((fd) => fd.id === foodId);
+  // console.log(foundFood);
 
-    
-    return (
-        <div>
-            <Food food = {found} ></Food>
-        </div>
-    );
+  return (
+    <div>
+      <Food food={foundFood}></Food>
+    </div>
+  );
 };
 
 export default Fooddetail;

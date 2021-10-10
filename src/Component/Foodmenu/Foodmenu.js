@@ -1,68 +1,95 @@
-import React, { useState } from 'react';
-import fakefoodMenu from '../../fakedata/Fakefood'
-import Currentfood from '../Currentfood/Currentfood';
-import './Foodmenu.css'
-import '../Header/Header.css'
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import fakefoodMenu from "../../fakedata/Fakefood";
+import Currentfood from "../Currentfood/Currentfood";
+import styles from "./Foodmenu.module.css";
+import { Link } from "react-router-dom";
 
 const Foodmenu = () => {
-    const allLunch = fakefoodMenu.filter(fakefood => fakefood.category === "lunch");
-    const lunchmenu = allLunch.slice(0, 6);
-    const [currentfood, setCurrentfood] = useState(lunchmenu);
+  const [fCategory, setFCategory] = useState("lunch");
+  const [foodId, setFoodId] = useState("");
+  const allLunch = fakefoodMenu.filter(
+    (fakefood) => fakefood.category === fCategory
+  );
+  const lunchMenu = allLunch.slice(0, 6);
+  const [currentfood, setCurrentfood] = useState(lunchMenu);
 
-
-    const filteringFood = (food) =>{
-        const allmenu = fakefoodMenu.filter(fakefood => fakefood.category === food);
-        const foodmenu = allmenu.slice(0, 6);
-        setCurrentfood(foodmenu);
-    }
-    
-
-    const breakfast = () =>{
-
-        // const allBreakfast = fakefoodMenu.filter(fakefood => fakefood.category === "breakfast");
-        // const breakfastmenu = allBreakfast.slice(0, 6);
-        // setCurrentfood(breakfastmenu);
-       
-        const breakfast = "breakfast";
-        filteringFood(breakfast); 
-    }
-    const lunch = () =>{
-        // setCurrentfood(lunchmenu);
-        
-        const lunch = "lunch";
-        filteringFood(lunch);
-    }
-
-    const dinner = () =>{
-        // const alldinner = fakefoodMenu.filter(fakefood => fakefood.category === "dinner");
-        // const dinnermenu = alldinner.slice(0, 6);
-        // setCurrentfood(dinnermenu);
-
-        const dinner = "dinner";
-        filteringFood(dinner);
-        
-    }
-    return (
-        
-        <div>
-            <div className="food-list-ancor">
-                <button onClick={breakfast}>Breakfirst</button>
-                <button onClick={lunch}>Lunch</button>
-                <button onClick={dinner}>dinner</button>
-            </div>
-
-
-            {currentfood.map(foods => <Currentfood key = {foods.key} foods = {foods}></Currentfood>)}
-
-
-            <div className = "checkoutButton-section">
-                <Link to = "checkout">
-                    <button className = "redButton">Checkout Your Food</button>
-                </Link>
-            </div>
-        </div>
+  const selectedFood = (foodCategory) => {
+    const sellectedCurrentFood = fakefoodMenu.filter(
+      (fakefood) => fakefood.category === foodCategory
     );
+    const foods = sellectedCurrentFood.slice(0, 6);
+    setCurrentfood(foods);
+    setFCategory(foodCategory);
+  };
+
+  return (
+    <div>
+      <div className="food-list-ancor">
+        {fCategory === "breakfast" ? (
+          <button
+            onClick={() => selectedFood("breakfast")}
+            style={{ borderBottom: "1px solid red", color: "red" }}
+            className={styles.MenuButton}
+          >
+            Breakfirst
+          </button>
+        ) : (
+          <button
+            onClick={() => selectedFood("breakfast")}
+            className={styles.MenuButton}
+          >
+            Breakfirst
+          </button>
+        )}
+        {fCategory === "lunch" ? (
+          <button
+            onClick={() => selectedFood("lunch")}
+            style={{ borderBottom: "1px solid red", color: "red" }}
+            className={styles.MenuButton}
+          >
+            Lunch
+          </button>
+        ) : (
+          <button
+            onClick={() => selectedFood("lunch")}
+            className={styles.MenuButton}
+          >
+            Lunch
+          </button>
+        )}
+        {fCategory === "dinner" ? (
+          <button
+            onClick={() => selectedFood("dinner")}
+            style={{ borderBottom: "1px solid red", color: "red" }}
+            className={styles.MenuButton}
+          >
+            dinner
+          </button>
+        ) : (
+          <button
+            onClick={() => selectedFood("dinner")}
+            className={styles.MenuButton}
+          >
+            dinner
+          </button>
+        )}
+      </div>
+
+      <div className={styles.currentFood}>
+        {currentfood.map((food) => (
+          <Currentfood key={food.id} setFoodId={setFoodId} foods={food}></Currentfood>
+        ))}
+      </div>
+      {/* <br /> */}
+
+      <div className={styles.checkoutButtonSection}>
+        {/* <Link to="/checkout">
+            <button className={styles.checkoutButton}>Checkout Your Food</button>
+        </Link> */}
+      </div>
+    </div>
+  );
 };
+
 
 export default Foodmenu;
