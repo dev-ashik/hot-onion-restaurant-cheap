@@ -7,7 +7,8 @@ import styles from "./Fooddetail.module.css";
 const Fooddetail = () => {
   let { foodId } = useParams();
   const foundFood = fakefoodMenu.find((fd) => fd.id === foodId);
-  console.log(foundFood);
+  const restFood = fakefoodMenu.filter((fd) => fd.id !== foundFood.id && fd.category === foundFood.category);
+  
 
   const [fCategory, setFCategory] = useState(foundFood.category);
 //   const [foodId, setFoodId] = useState("");
@@ -29,57 +30,7 @@ const Fooddetail = () => {
 
   return (
     <div className={styles.fooddetails}>
-        <div className="food-list-ancor">
-        {fCategory === "breakfast" ? (
-          <Link to="/"
-            onClick={() => selectedFood("breakfast")}
-            style={{ borderBottom: "1px solid red", color: "red" }}
-            className={styles.MenuButton}
-          >
-            Breakfirst
-          </Link>
-        ) : (
-          <Link to="/"
-            onClick={() => selectedFood("breakfast")}
-            className={styles.MenuButton}
-          >
-            Breakfirst
-          </Link>
-        )}
-        {fCategory === "lunch" ? (
-          <Link to="/"
-            onClick={() => selectedFood("lunch")}
-            style={{ borderBottom: "1px solid red", color: "red" }}
-            className={styles.MenuButton}
-          >
-            Lunch
-          </Link>
-        ) : (
-          <Link to="/"
-            onClick={() => selectedFood("lunch")}
-            className={styles.MenuButton}
-          >
-            Lunch
-          </Link>
-        )}
-        {fCategory === "dinner" ? (
-          <Link to="/"
-            onClick={() => selectedFood("dinner")}
-            style={{ borderBottom: "1px solid red", color: "red" }}
-            className={styles.MenuButton}
-          >
-            dinner
-          </Link>
-        ) : (
-          <Link to="/"
-            onClick={() => selectedFood("dinner")}
-            className={styles.MenuButton}
-          >
-            dinner
-          </Link>
-        )}
-      </div>
-      <Food food={foundFood}></Food>
+      <Food food={foundFood} restFood={restFood}></Food>
     </div>
   );
 };

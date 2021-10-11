@@ -1,0 +1,15 @@
+.checkoutButtonSection{
+    text-align: center;
+    padding: 20px;
+    /* background-color: red; */
+    /* margin: 50px; */
+    
+}
+
+.checkoutButton {
+    border: none;
+    color: white;
+    border-radius: 20px;
+    background-color: red;
+    padding: 5px 20px;
+}

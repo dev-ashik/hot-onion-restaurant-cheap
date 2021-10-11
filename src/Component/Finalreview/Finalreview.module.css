@@ -1,0 +1,44 @@
+.FinalreviewImg{
+    margin: 5px;
+    width: 60px;
+}
+
+.FinalreviewImg img{
+    height: 70px;
+    width: 70px;
+}
+
+.FinalreviewDetail{
+    margin: 5px;
+    padding: 10px;
+    width: 250px;
+}
+
+.FinalreviewTwoButton{
+    margin: 20px;
+    margin-top: 45px;
+    text-align: right;
+}
+
+.FinalreviewTwoButton button{
+    margin: 5px;
+}
+
+.Finalreview{
+    background-color: rgb(233, 231, 231);
+    height: 120px;
+    width: 450px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: 0;
+    display: flex;
+}
+
+.finalreviewPlussMinusButton {
+    background-color: transparent;
+    border: none;
+}
+
+.finalreviewPlussMinusButton:focus {
+    outline: none;
+}

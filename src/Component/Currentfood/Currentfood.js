@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Currentfood = (props) => {
   const { foodName, detail, prise, id, photo } = props.foods;
-  console.log(photo);
+  // console.log(photo);
 
   return (
     <>

@@ -3,35 +3,38 @@ import { getDatabaseCart } from '../../utilities/databaseManager';
 import fakefoodMenu from '../../fakedata/Fakefood';
 
 import Userdetails from '../Userdetails/Userdetails';
-import './Foodcheckout.css'
+import styles from './Foodcheckout.module.css'
 import Finalreview from '../Finalreview/Finalreview';
+import {Link} from 'react-router-dom';
 
 const Foodcheckout = () => {
     const [checkoutCart, setCheckoutcart] = useState([]);
-    
+    console.log(checkoutCart);
 
     useEffect(() =>{
         // database
-        const saveData = getDatabaseCart();
+        const databaseSaveData = getDatabaseCart();
+        console.log(databaseSaveData);
 
-        const foodKeys = Object.keys(saveData);
+        const foodKeys = Object.keys(databaseSaveData);
         const orderedFood = foodKeys.map( key =>{
-            const food = fakefoodMenu.find(fd => fd.key == key);
-            food.quantity = saveData[key];
+            const food = fakefoodMenu.find(fd => fd.id === key);
+            food.quantity = databaseSaveData[key]
             return food;
         });
 
         setCheckoutcart(orderedFood);
     },[])
 
-    return (
-        <div className="review">
 
-            <div className="review-leftSide">
+    return (
+        <div className={styles.review}>
+          <div className={styles.reviewMiddleDiv}>
+            <div className={styles.reviewLeftSide}>
                 <Userdetails></Userdetails>
             </div>
 
-            <div className="review-rightSide">
+            <div className={styles.reviewRightSide}>
                 <span>From <strong>Gulshan Plaza Restaura GPA</strong></span>
                 <h6>Arriving in 20-30 min</h6>
                 <h6>Road</h6>
@@ -43,9 +46,9 @@ const Foodcheckout = () => {
                 <h6>subtotal. item</h6>
                 <h6>Tax</h6>
                 <h6>Delivery fee $2</h6>
-                <button>place Order</button>
+                <Link to="/delivery" className={styles.placeOrder}>place Order</Link>
             </div>
-            
+          </div>
         </div>
     );
 };

@@ -1,21 +1,23 @@
 .edit-detail{
     border-bottom: 1px solid gray;
+    margin-bottom: 30px;
 }
 
 .userDetail input{
     display: block;
     background-color: rgb(238, 237, 237);
-    margin: 10px;
+    margin: 15px 0;
     padding: 5px;
     border: none;
     border-radius: 5px;
-    width: 200px;
+    width: 370px;
 }
 
 .error{
     color: red;
 }
 
-.submitButton{
-    
+.userDetailsSubmitButton {
+    background-color: red !important;
+    color: white !important;
 }

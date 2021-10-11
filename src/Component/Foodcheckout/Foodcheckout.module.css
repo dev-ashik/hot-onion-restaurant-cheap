@@ -1,0 +1,32 @@
+.review{
+    margin: 50px;
+    height: 600px;
+}
+
+.reviewMiddleDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.reviewLeftSide{
+    float: left;
+    margin: 20px;
+    margin-right: 100px;
+}
+
+.reviewRightSide{
+    float: left;
+    margin: 20px;
+}
+
+.placeOrder {
+    color: white;
+    background-color: lightgray;
+    padding: 5px 69px;
+    border-radius: 5px;
+}
+
+.placeOrder:hover {
+    text-decoration: none;
+    color: white;
+}

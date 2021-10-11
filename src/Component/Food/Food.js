@@ -8,6 +8,10 @@ import styles from "./Food.module.css";
 
 const Food = (props) => {
   const { foodName, detail, prise, id, photo } = props.food;
+  const restFood = props.restFood;
+  const towRestFd = restFood.slice(0, 2)
+  const [towRestFood, setTowRestFood] = useState(towRestFd)
+//   console.log(restFood);
   const [count, setCount] = useState(1);
 
   const minusFood = () => {
@@ -41,14 +45,14 @@ const Food = (props) => {
 
   // const [cart, setCart] = useState([]);
   const handleAddFood = () => {
-    const toBeAddKey = props.food.key;
-    props.food.quantity = count;
+    const toBeAddKey = props.food.id;
+    props.food.quantity = count; // add a new property quantity
 
     // this is function for store data in local and section storage.
     addToDatabaseCart(toBeAddKey, count);
   };
 
-  const foodPrise = prise * count;
+  const foodPrise = (prise * count).toFixed(2);
 
   return (
     <div className={styles.foodDetailSectain}>
@@ -63,17 +67,24 @@ const Food = (props) => {
           </div>
         </div>
         {count > 0 ? (
-          <Link to="currentfood">
+          <>
             {" "}
             <button onClick={handleAddFood} className={styles.addButton}>
               <FontAwesomeIcon icon={faShoppingCart} /> Add
             </button>{" "}
-          </Link>
+          </>
         ) : (
           <button className={styles.noneButton}>
             <FontAwesomeIcon icon={faShoppingCart} /> Add
           </button>
         )}
+
+        <div className={styles.restFood}>
+            {
+                towRestFood.map(fd => <img  src={fd.photo} className={styles.restFoodPhoto} alt="rest food" height="130" width="130"/>)
+            }
+            
+        </div>
       </div>
 
       <div className={styles.foodDetailImg}>
