@@ -3,6 +3,7 @@ import logo2 from '../../images/logo2.png';
 import './Header.css'
 import { Navbar} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from 'react-router-dom';
 // import Breakfast from '../../fakedata/Fakefood'
 // import lunchMenu from '../../fakedata/Lunch'
 // import Dinner from '../../fakedata/Dinner'
@@ -23,17 +24,21 @@ const Header = () => {
                 <Navbar.Collapse className="justify-content-end">
                 <Navbar.Text>
                     <div className="login-signUp">
-                        <a href="/currentfood">Foods</a>
-                        <a href="/login">Login</a>
-                        <a className="redButton" style = {{color: "white"}} href="">Sign up</a>
+                        <Link to="/">Foods</Link>
+                        <Link to="/login">Login</Link>
+                        <Link className="redButton" style = {{color: "white"}} to="/login">Sign up</Link>
                     </div>
                 </Navbar.Text>
                 </Navbar.Collapse>
             </Navbar>
             <section className="bannerbackground">
-                <h1>Best food waiting for you.</h1>
-                <input className="searchBox" placeholder="Scarce food items" type="text" />
-                <button className="redButton">Scarch</button>
+                <div className="poster_content">
+                    <h1>Best food waiting for you.</h1>
+                    <div className="searchBox">
+                        <input className="searchInputBox" placeholder="Scarce food items" type="text" />
+                        <button className="redButton">Scarch</button>
+                    </div>
+                </div>
             </section>
             
 

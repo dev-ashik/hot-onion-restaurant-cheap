@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-import fakefoodMenu from "../../fakedata/Fakefood";
-import Currentfood from "../Currentfood/Currentfood";
-import styles from "./Foodmenu.module.css";
-import { Link } from "react-router-dom";
+import React, {useState} from 'react';
+import fakefoodMenu from '../../fakedata/Fakefood';
+import styles from "./Menu.module.css"
 
-const Foodmenu = ({currentfood}) => {
-    // console.log(currentfood);
+const Menu = ({setCurrentfood, fCategory, setFCategory}) => {
+    
 //   const [fCategory, setFCategory] = useState("lunch");
 //   const [foodId, setFoodId] = useState("");
 //   const allLunch = fakefoodMenu.filter(
@@ -14,18 +12,17 @@ const Foodmenu = ({currentfood}) => {
 //   const lunchMenu = allLunch.slice(0, 6);
 //   const [currentfood, setCurrentfood] = useState(lunchMenu);
 
-//   const selectedFood = (foodCategory) => {
-//     const sellectedCurrentFood = fakefoodMenu.filter(
-//       (fakefood) => fakefood.category === foodCategory
-//     );
-//     const foods = sellectedCurrentFood.slice(0, 6);
-//     setCurrentfood(foods);
-//     setFCategory(foodCategory);
-//   };
-
-  return (
-    <div>
-      {/* <div className="food-list-ancor">
+  const selectedFood = (foodCategory) => {
+    const sellectedCurrentFood = fakefoodMenu.filter(
+      (fakefood) => fakefood.category === foodCategory
+    );
+    const foods = sellectedCurrentFood.slice(0, 6);
+    setCurrentfood(foods);
+    setFCategory(foodCategory);
+  };
+    return (
+        <div>
+            <div className="food-list-ancor">
         {fCategory === "breakfast" ? (
           <button
             onClick={() => selectedFood("breakfast")}
@@ -74,18 +71,9 @@ const Foodmenu = ({currentfood}) => {
             dinner
           </button>
         )}
-      </div> */}
-
-      <div className={styles.currentFood}>
-        {currentfood.map((food) => (
-          <Currentfood key={food.id} foods={food}></Currentfood>
-        ))}
       </div>
-
-      
-    </div>
-  );
+        </div>
+    );
 };
 
-
-export default Foodmenu;
+export default Menu;

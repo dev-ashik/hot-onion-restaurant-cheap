@@ -9,9 +9,6 @@ import logo2 from '../../images/logo2.png'
 
 
 const Login = () => {
-
-    
-
     const [user, setUser] = useState({
         isLogedIn: false,
         name: '',
@@ -22,7 +19,7 @@ const Login = () => {
         existingUser: false
     });
 
-    
+    // console.log(user);
     const is_valid_email = email => /(.+)@(.+){2,}\.(.+){2,}/.test(email);
     const hasNumber = input => /\d/.test(input);
     const samePass = (pass, conformPass) => { 
@@ -45,7 +42,6 @@ const Login = () => {
         const newUserInfo = {
             ...user
         }
-
         // perform validetion
 
         let isValid = true;
@@ -57,11 +53,9 @@ const Login = () => {
         if(event.target.name === "password"){
             isValid = event.target.value.length >= 8 && hasNumber(event.target.value);
             // password = event.target.value;
-            
         }
 
         if(event.target.name === "conformPassword"){
-            
             // console.log(pass);
             // console.log(event.target.value === password);
         }
@@ -69,22 +63,24 @@ const Login = () => {
         newUserInfo[event.target.name] = event.target.value
         newUserInfo.isValid = isValid;
         setUser(newUserInfo);
-        
     }
 
     const creatAccount = (event) =>{
-        
         if(user.isValid){
            firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
            .then(res =>{
-               console.log(res);
                const createdUser = {...user};
                createdUser.isLogedIn = true;
                setUser(createdUser);
+               updateUserInfo(user.name);
+            //    console.log(user, createdUser);
            })
            .catch(err =>{
                console.log(err.code);
                console.log(err.message);
+               const createdUser = {...user};
+               createdUser.errorMessate = err.message;
+               setUser(createdUser);
            })
         }
         else{
@@ -93,6 +89,8 @@ const Login = () => {
         event.preventDefault();
         event.target.reset();
     }
+
+    // console.log(user);
 
     const logInAccount = (event) =>{
         firebase.auth().signInWithEmailAndPassword(user.email, user.password)
@@ -107,7 +105,6 @@ const Login = () => {
             console.log(err.message);
         })
      
-        
         event.preventDefault();
         event.target.reset();
     }
@@ -122,12 +119,27 @@ const Login = () => {
         })
     }
 
-    
+    const updateUserInfo = name => {
+        const user = firebase.auth().currentUser;
+
+    user.updateProfile({
+    displayName: name
+    }).then(() => {
+    // Update successful
+    // ...
+    }).catch((error) => {
+    // An error occurred
+    // ...
+    });
+    }
 
     return (
         <div className="signIn">
-            <img src={logo2} alt=""/><br/>
-
+            <img src={logo2} alt="" height="100" width="100"/><br/>
+            {
+                user.name && <h1>{user.name}</h1>
+            }
+            
             <form style={{display:user.existingUser ? 'none' : 'block'}} onSubmit = {creatAccount}>
             <input onBlur = {handleChange} name = "name" type="text" placeholder="Name" required/> <br/>
             <input onBlur = {handleChange} name = "email" type="text" placeholder="Email" required/> <br/>
@@ -137,7 +149,7 @@ const Login = () => {
                 user.isLogedIn ? <input className="signIn-submitButton" onSubmit = {signOut} type="submit" value="Sign Out"/> : <input className="signIn-submitButton" type="submit" value="Sign up"/>
             }
             <br/>
-            <button onClick={haveAccount}>have an account</button>
+            <button onClick={haveAccount}>Already have an account</button>
             </form>
 
             <form style={{display:user.existingUser ? 'block' : 'none'}} onSubmit = {logInAccount}>
@@ -147,7 +159,9 @@ const Login = () => {
             <br/>
             <button className="simple-button" onClick={createAccount}>Create a new account</button>
             </form>
-            
+            {
+                user.errorMessate && <p className="errorText">{user.errorMessate}</p>
+            }
         </div>
     );
 };

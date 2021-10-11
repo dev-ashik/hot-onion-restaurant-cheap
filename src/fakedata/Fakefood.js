@@ -1,174 +1,172 @@
+import breakfast1 from "../images/Breakfast/breakfast1.png";
+import breakfast2 from "../images/Breakfast/breakfast2.png";
+import breakfast3 from "../images/Breakfast/breakfast3.png";
+import breakfast4 from "../images/Breakfast/breakfast4.png";
+import breakfast5 from "../images/Breakfast/breakfast5.png";
+import breakfast6 from "../images/Breakfast/breakfast6.png";
+
+import lunch1 from "../images/lunch/lunch1.png";
+import lunch2 from "../images/lunch/lunch2.png";
+import lunch3 from "../images/lunch/lunch3.png";
+import lunch4 from "../images/lunch/lunch4.png";
+import lunch5 from "../images/lunch/lunch5.png";
+import lunch6 from "../images/lunch/lunch6.png";
+
+import dinner1 from "../images/Dinner/dinner1.png";
+import dinner2 from "../images/Dinner/dinner2.png";
+import dinner3 from "../images/Dinner/dinner3.png";
+import dinner4 from "../images/Dinner/dinner4.png";
+import dinner5 from "../images/Dinner/dinner5.png";
+import dinner6 from "../images/Dinner/dinner6.png";
+
+
 var fakefoodMenu =[
     {
-        foodName : "Breakfast",
+        id: "b1",
+        foodName : "Breakfast-1",
         detail:"How we dream about our future",
         prise:23.99,
-        key: 1101,
         category: "breakfast",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQwxNCqEXRB0Fn7P0ncBsXq1Crawprh3dRHyA&usqp=CAU"
+        photo:breakfast1
     },
     {
-        foodName : "Breakf",
+        id: "b2",
+        foodName : "Breakfast-2",
         detail:"How we dream about our future",
         prise:9.99,
-        key: 1102,
         category: "breakfast",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR5WGgHSKgxt5vX2xIZcOiY9NRyIWYN07rYxA&usqp=CAU"
+        photo:breakfast2
     },
     {
-        foodName : "Breakf",
+        id: "b3",
+        foodName : "Breakfast-3",
         detail:"How we dream about our future",
         prise:6.99,
-        key: 1103,
         category: "breakfast",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTc5ncpGIfVt2tTbVnfLh10PXjLQtXYzZ24mg&usqp=CAU"
+        photo:breakfast3
     },
     {
-        foodName : "Breakf",
+        id: "b4",
+        foodName : "Breakfast-4",
         detail:"How we dream about our future",
         prise:8.99,
-        key: 1104,
         category: "breakfast",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1iJfOf_t-OdKBknIsefpx5wIjOGqVe1VSjw&usqp=CAU"
+        photo:breakfast4
     },
     {
-        foodName : "Breakf",
+        id: "b5",
+        foodName : "Breakfast-5",
         detail:"How we dream about our future",
         prise:15.99,
-        key: 1105,
         category: "breakfast",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSiytPkw_ArrbbItSC5ZCoiKlJ52NG2OAbt8g&usqp=CAU"
+        photo:breakfast5
     },
     {
-        foodName : "Breakf",
+        id: "b6",
+        foodName : "Breakfast-6",
         detail:"How we dream about our future",
         prise:7.99,
-        key: 1106,
         category: "breakfast",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQaxRDl7UmYDOxpHE0NzsGOtqLbcEVu9oMprQ&usqp=CAU"
+        photo:breakfast6
     },
+
     {
-        foodName : "lunch",
+        id: "l1",
+        foodName : "lunch-1",
         detail:"How we dream about our future",
         prise:8.99,
-        key: 1205,
         category: "lunch",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1iJfOf_t-OdKBknIsefpx5wIjOGqVe1VSjw&usqp=CAU"
+        photo:lunch1
     },
     {
-        foodName : "lunch",
+        id: "l2",
+        foodName : "lunch-2",
         detail:"How we dream about our future",
         prise:15.99,
-        key: 1206,
         category: "lunch",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQG-hSDskaaBDt2y3TQhO4g_L6r23tXKi5sCg&usqp=CAU"
+        photo:lunch2
     },
     {
-        foodName : "lunch",
+        id: "l3",
+        foodName : "lunch-3",
         detail:"How we dream about our future",
         prise:7.99,
-        key: 1207,
         category: "lunch",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQaxRDl7UmYDOxpHE0NzsGOtqLbcEVu9oMprQ&usqp=CAU"
+        photo:lunch3
     },
     {
+        id: "l4",
         foodName : "Healthy Meal Pllan",
         detail:"How we dream about our future",
         prise:23.99,
-        key: 1201,
         category: "lunch",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0Heb7V1HvC_cBWXywBYUdYCxCfMSfLSo-Ww&usqp=CAU"
+        photo:lunch4
     },
     {
+        id: "l5",
         foodName : "Fried Chicken Bento",
         detail:"How we dream about our future",
         prise:9.99,
-        key: 1202,
         category: "lunch",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRCpN3-f0xdlhMQ9gna_txerLep2bFqCq9mNA&usqp=CAU"
+        photo:lunch5
     },
     {
+        id: "l6",
         foodName : "Tarragon-Rubbed-Salmon",
         detail:"How we dream about our future",
         prise:6.99,
-        key: 1203,
         category: "lunch",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQFYT6V2ocqKNKlEXtbXyPLy6JJY2G5k1MKXw&usqp=CAU"
+        photo:lunch6
     },
+
     {
-        foodName : "Indian Lunch",
+        id: "d1",
+        foodName : "Dinner-1",
         detail:"How we dream about our future",
         prise:8.99,
-        key: 1204,
-        category: "lunch",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1iJfOf_t-OdKBknIsefpx5wIjOGqVe1VSjw&usqp=CAU"
+        category: "dinner",
+        photo:dinner1
     },
     {
-        foodName : "Beef Steak",
+        id: "d2",
+        foodName : "Dinner-2",
         detail:"How we dream about our future",
         prise:15.99,
-        key: 1205,
-        category: "lunch",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSiytPkw_ArrbbItSC5ZCoiKlJ52NG2OAbt8g&usqp=CAU"
+        category: "dinner",
+        photo:dinner2
     },
     {
+        id: "d3",
         foodName : "Honey-Soy-Glazed Salmon with Peppers",
         detail:"How we dream about our future",
         prise:7.99,
-        key: 1206,
-        category: "lunch",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQaxRDl7UmYDOxpHE0NzsGOtqLbcEVu9oMprQ&usqp=CAU"
+        category: "dinner",
+        photo:dinner3
     },
     {
-        foodName : "Dinner",
+        id: "d4",
+        foodName : "Dinner-4",
         detail:"How we dream about our future",
         prise:23.99,
-        key: 1201,
         category: "dinner",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQFYT6V2ocqKNKlEXtbXyPLy6JJY2G5k1MKXw&usqp=CAU"
+        photo:dinner4
     },
     {
-        foodName : "Dinner",
+        id: "d5",
+        foodName : "Dinner-5",
         detail:"How we dream about our future",
         prise:9.99,
-        key: 1202,
         category: "dinner",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQaxRDl7UmYDOxpHE0NzsGOtqLbcEVu9oMprQ&usqp=CAU"
+        photo:dinner5
     },
     {
-        foodName : "Dinner",
+        id: "d6",
+        foodName : "Dinner-6",
         detail:"How we dream about our future",
         prise:6.99,
-        key: 1204,
         category: "dinner",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSiytPkw_ArrbbItSC5ZCoiKlJ52NG2OAbt8g&usqp=CAU"
+        photo:dinner6
     },
-    {
-        foodName : "Dinner",
-        detail:"How we dream about our future",
-        prise:8.99,
-        key: 1205,
-        category: "dinner",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1iJfOf_t-OdKBknIsefpx5wIjOGqVe1VSjw&usqp=CAU"
-    },
-    {
-        foodName : "Dinner",
-        detail:"How we dream about our future",
-        prise:15.99,
-        key: 1206,
-        category: "dinner",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQG-hSDskaaBDt2y3TQhO4g_L6r23tXKi5sCg&usqp=CAU"
-    },
-    {
-        foodName : "Dinner",
-        detail:"How we dream about our future",
-        prise:7.99,
-        key: 1207,
-        category: "dinner",
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQaxRDl7UmYDOxpHE0NzsGOtqLbcEVu9oMprQ&usqp=CAU"
-    },
-    
-    
 ]; 
 
 

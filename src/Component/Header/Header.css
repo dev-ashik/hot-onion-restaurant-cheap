@@ -8,32 +8,53 @@
     text-decoration: none;
 }
 
-.redButton{
-    background-color: red;
+.searchBox{
+    /* border-radius: 20px; */
+    /* border: none; */
+    
+    background-color: white;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 20px;
-    border: none;
-    color: white;
+    /* display: flex;
+    justify-content: center; */
+
 }
 
-.searchBox{
-    border-radius: 20px;
+.searchInputBox {
     border: none;
+    border-radius: 20px;
+    padding: 5px 0;
+}
+
+
+.searchInputBox:focus {
+    outline: none;
+  }
+
+.redButton{
+    float: right;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    background-color: red;
+    padding: 5px 20px;
 }
 
 .bannerbackground{
-    text-align: center;
-    padding-top: 50px;
-
-    background-image: url("../../images/bannerbackground2.png");
-    background-repeat: no-repeat;
-    
-    /* height: 40vw; */
-    height: 300px;
-    background-size: cover;
-    background-position: 100% 0%;
     width: 100%;
+    height: 500px;
+    text-align: center;
+    padding-top: 178px;
+    background-size: cover;
+    background-position: 100% 70%;
+    background-repeat: no-repeat;
+    background-image: url("../../images/bannerbackground2.png");
+    /* height: 40vw; */
 
 }
+
 
 .food-list-ancor{
     text-align: center;
@@ -45,6 +66,8 @@
     margin: 30px;
     
 }
+
+
 
 
 
