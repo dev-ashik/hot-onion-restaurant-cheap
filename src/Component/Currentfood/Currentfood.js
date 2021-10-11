@@ -17,9 +17,9 @@ const Currentfood = (props) => {
             className={styles.cardBody}
             style={{ backgroundColor: "white", borderTop: "none" }}
           >
-            <h3 className={styles.cardTitle}>{foodName}</h3>
+            <h4 className={styles.cardTitle}>{foodName}</h4>
             <p className={styles.cardDetail}>{detail}</p>
-            <h2>${prise}</h2>
+            <h3 className={styles.price}>${prise}</h3>
           </div>
         </section>
       </Link>

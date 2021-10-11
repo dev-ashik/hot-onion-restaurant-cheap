@@ -55,18 +55,34 @@
 }
 
 
-.food-list-ancor{
-    padding: 30px;
-    text-align: center;
-}
 
-.food-list-ancor a{
-    margin: 30px;
-    color: black;
+
+@media only screen and (max-width: 1200px) {
+    .bannerbackground{
+        height: 370px;
+        padding-top: 115px;
+        /* background-position: 100% 70%; */
+    }
+  }
+@media only screen and (max-width: 1024px) {
     
-}
-
-
+  }
+@media only screen and (max-width: 768px) {
+    .bannerbackground{
+        height: 281px;
+        padding-top: 84px;
+    }
+    
+  }
+@media only screen and (max-width: 480px) {
+    .bannerbackground{
+        width: 768px;
+    }
+    .navber {
+        width: 768px;
+    }
+    
+  }
 
 
 

@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <div>
-      <Navbar>
+      <Navbar className="navber">
         <img className="logo2" src={logo2} alt="" />
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">

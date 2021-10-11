@@ -40,3 +40,49 @@
 .cardTitle{
     /* margin: 0px; */
 }
+
+@media only screen and (max-width: 1440px) {
+  }
+@media only screen and (max-width: 1200px) {
+    .foodCard{
+        width: 243px;
+        margin: 10px 41px;
+    }
+    .cardImageDiv {
+        height: 217px;
+    }
+    .cardDetail{
+        margin: 0;
+    }
+    .cardTitle{
+        margin: 0px;
+    }
+  }
+@media only screen and (max-width: 1024px) {
+    .foodCard{
+        width: 240px;
+        margin: 5px 10px;
+    }
+  }
+@media only screen and (max-width: 768px) {
+    .foodCard{
+        width: 200px;
+        margin: 5px;
+    }
+    .cardImageDiv {
+        height: 180px;
+    }
+    .cardDetail{
+        font-size: 12px;
+    }
+    .cardTitle{
+        font-size: 20px;
+    }
+    .price {
+        font-size: 25px;
+    }
+  }
+@media only screen and (max-width: 480px) {
+    
+  }
+

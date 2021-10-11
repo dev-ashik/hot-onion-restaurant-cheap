@@ -13,6 +13,7 @@ import Blackfooter from "./Component/Blackfooter/Blackfooter";
 import Foodcheckout from "./Component/Foodcheckout/Foodcheckout";
 import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Choose from "./Component/Choose/Choose";
 
 export const userContext = createContext();
 
@@ -60,6 +61,7 @@ function App() {
         </Switch>
         <Chectout />
       </Router>
+      <Choose/>
       <Blackfooter></Blackfooter>
     </userContext.Provider>
   );
