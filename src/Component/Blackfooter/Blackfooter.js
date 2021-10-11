@@ -6,30 +6,36 @@ const Blackfooter = () => {
     return (
         <div className="black-footer">
             
-            <div className="row">
+            <div className="row rowUp">
                 <div className="col-md-6">
                     <img src={logo} alt=""/>
                 </div>
                 <div className="col-md-3 footer-textColor">
-                    <p>About Online food <br/>Read our blog <br/>Sign up to deliver</p>
+                    <p className="text">About Online food</p>
+                    <p className="text">Read our blog</p>
+                    <p className="text">Sign up to deliver</p>
+                    <p className="text">Add your restaurant</p>
                 </div>
                 <div className="col-md-2 footer-textColor">
-                    <p>Cet help <br/>Read FAPs <br/>View all cities br Restaurants near me</p>
+                    <p className="text">Cet help</p>
+                    <p className="text">Read FAPs</p>
+                    <p className="text">View all cities</p>
+                    <p className="text">Restaurants near me</p>
                 </div>
             </div>
 
-            <div className="row">
+            <div className="row ">
                 <div className="col-md-7 grayColor">
                     <small>Copyright &#169; 2020 Online food</small>
                 </div>
                 <div className="col-md-2 footer-textColor">
-                    <p>Privacy Policy.</p>
+                    <p className="text">Privacy Policy.</p>
                 </div>
                 <div className="col-md-2 footer-textColor">
-                    <p>Terms of Use</p>
+                    <p className="text">Terms of Use</p>
                 </div>
                 <div className="col-md-1 footer-textColor">
-                    <p>Pricing</p>
+                    <p className="text">Pricing</p>
                 </div>
             </div>
            

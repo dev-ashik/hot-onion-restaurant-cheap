@@ -1,9 +1,6 @@
 .checkoutButtonSection{
     text-align: center;
     padding: 20px;
-    /* background-color: red; */
-    /* margin: 50px; */
-    
 }
 
 .checkoutButton {
@@ -12,4 +9,11 @@
     border-radius: 20px;
     background-color: red;
     padding: 5px 20px;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .checkoutButtonSection{
+        width: 768px;
+    }
 }

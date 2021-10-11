@@ -8,3 +8,35 @@
 
 
 
+@media only screen and (max-width: 1440px) {
+    .currentFood {
+        margin: 5px 195px;
+    }
+  }
+@media only screen and (max-width: 1200px) {
+    .currentFood {
+        height: 855px;
+        margin: 5px 100px;
+    }
+    
+  }
+@media only screen and (max-width: 1024px) {
+    
+  }
+@media only screen and (max-width: 768px) {
+    .currentFood {
+        height: 770px;
+        margin: 5px 60px;
+    }
+  }
+@media only screen and (max-width: 480px) {
+    .currentFood {
+        height: 770px;
+        margin: 5px 74px;
+        width: 756px;
+    }
+  }
+
+
+
+

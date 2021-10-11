@@ -1,0 +1,38 @@
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
+.chooseTopArea {
+    margin: 10px 443px;
+    margin-top: 52px;
+    width: 527px;
+}
+
+.chooseTopArea a{
+    width: 550px;
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .chooseTopArea {
+        margin: 10px 222px;
+        margin-top: 52px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .chooseTopArea {
+        margin: 10px 60px;
+        margin-top: 52px;
+    }
+    .cards {
+        margin: 0 40px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .choose {
+        width: 770px;
+    }
+}

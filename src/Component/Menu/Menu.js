@@ -22,7 +22,7 @@ const Menu = ({setCurrentfood, fCategory, setFCategory}) => {
   };
     return (
         <div>
-            <div className="food-list-ancor">
+            <div className={styles.foodListAncor}>
         {fCategory === "breakfast" ? (
           <button
             onClick={() => selectedFood("breakfast")}
