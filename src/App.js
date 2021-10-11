@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Component/Header/Header";
@@ -14,10 +14,16 @@ import Menu from "./Component/Menu/Menu";
 import fakefoodMenu from "./fakedata/Fakefood";
 import Chectout from "./Component/Checkout/Chectout";
 import Delivery from "./Component/Delivery/Delivery";
-// import Home from "./Component/Menu/Menu";
-// import Menu from "./Component/Home/Menu";
+import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
+
+export const userContext = createContext();
 
 function App() {
+
+  const [loggedInUser, setLoggedInUser] = useState({
+    name: ''
+  })
+
   const [fCategory, setFCategory] = useState("lunch");
   const [foodId, setFoodId] = useState("");
   const allLunch = fakefoodMenu.filter(
@@ -27,7 +33,7 @@ function App() {
   const [currentfood, setCurrentfood] = useState(lunchMenu);
   // console.log(currentfood);
   return (
-    <div>
+    <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
           <Header/>
           <Menu setCurrentfood={setCurrentfood} fCategory={fCategory} setFCategory={setFCategory}/>
@@ -47,9 +53,9 @@ function App() {
           <Route path="/checkout">
             <Foodcheckout></Foodcheckout>
           </Route>
-          <Route path="/delivery">
+          <PrivateRoute path="/delivery">
             <Delivery></Delivery>
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>
@@ -61,7 +67,7 @@ function App() {
       </Router>
       {/* <Footer></Footer>  */}
       {/* <Blackfooter></Blackfooter>    */}
-    </div>
+    </userContext.Provider>
   );
 }
 
