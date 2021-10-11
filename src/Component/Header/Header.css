@@ -2,6 +2,13 @@
     width: 100px;
 }
 
+.userName {
+    font-size: 20px;
+    font-weight: 700;
+    color: blue !important;
+    margin: 5px 10px;
+}
+
 .login-signUp a{
     margin-right: 10px;
     padding: 5px 15px;

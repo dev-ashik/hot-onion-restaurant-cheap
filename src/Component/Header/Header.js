@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import logo2 from '../../images/logo2.png';
 import './Header.css'
 import { Navbar} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-router-dom';
+import {userContext} from '../../App';
 // import Breakfast from '../../fakedata/Fakefood'
 // import lunchMenu from '../../fakedata/Lunch'
 // import Dinner from '../../fakedata/Dinner'
@@ -13,7 +14,7 @@ import {Link} from 'react-router-dom';
 
 const Header = () => {
     
-
+const [loggedInUser] = useContext(userContext);
     
 
     return (
@@ -26,6 +27,7 @@ const Header = () => {
                     <div className="login-signUp">
                         <Link to="/">Foods</Link>
                         <Link to="/login">Login</Link>
+                        <Link className="userName">{loggedInUser.name}</Link>
                         <Link className="redButton" style = {{color: "white"}} to="/login">Sign up</Link>
                     </div>
                 </Navbar.Text>
