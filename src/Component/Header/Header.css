@@ -5,34 +5,28 @@
 .userName {
     font-size: 20px;
     font-weight: 700;
-    color: blue !important;
     margin: 5px 10px;
+    color: blue !important;
 }
 
 .login-signUp a{
-    margin-right: 10px;
     padding: 5px 15px;
+    margin-right: 10px;
     text-decoration: none;
 }
 
 .searchBox{
-    /* border-radius: 20px; */
-    /* border: none; */
-    
-    background-color: white;
     width: 320px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
-    /* display: flex;
-    justify-content: center; */
-
+    background-color: white;
 }
 
 .searchInputBox {
     border: none;
-    border-radius: 20px;
     padding: 5px 0;
+    border-radius: 20px;
 }
 
 
@@ -44,9 +38,9 @@
     float: right;
     border: none;
     color: white;
+    padding: 5px 20px;
     border-radius: 20px;
     background-color: red;
-    padding: 5px 20px;
 }
 
 .bannerbackground{
@@ -58,19 +52,17 @@
     background-position: 100% 70%;
     background-repeat: no-repeat;
     background-image: url("../../images/bannerbackground2.png");
-    /* height: 40vw; */
-
 }
 
 
 .food-list-ancor{
-    text-align: center;
     padding: 30px;
+    text-align: center;
 }
 
 .food-list-ancor a{
-    color: black;
     margin: 30px;
+    color: black;
     
 }
 

@@ -1,53 +1,51 @@
 .delivery {
-    margin: 10px 100px;
     display: flex;
-    justify-content: center;
-    
+    margin: 10px 100px;
+  justify-content: center;
 }
 
 .mapImage {
-    margin-right: 50px;
     width: 540px;
     height: 540px;
-
+    margin-right: 50px;
 }
 
 .bike {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .contactArea {
-    background-color: rgb(238, 236, 236);
     padding: 20px;
     border-radius: 10px;
+    background-color: rgb(238, 236, 236);
 }
 
 .location {
-    background-color: white;
     margin: 15px;
     padding: 15px;
     border-radius: 5px;
+    background-color: white;
 }
 
-.location p{
-    margin: 0;
+.location p {
+  margin: 0;
 }
 
 .locationTo {
-    margin-bottom: 20px ;
+  margin-bottom: 20px;
 }
 
 .timeSection {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
-.contactButton{
-    text-align: center;
+.contactButton {
+  text-align: center;
 }
 
-.contactButton button{
-    background-color: red;
-    padding: 5px 20px;
+.contactButton button {
     border: none;
+    padding: 5px 20px;
     border-radius: 5px;
+    background-color: red;
 }
