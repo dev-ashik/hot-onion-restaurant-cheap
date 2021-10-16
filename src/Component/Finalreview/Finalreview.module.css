@@ -42,3 +42,10 @@
 .finalreviewPlussMinusButton:focus {
     outline: none;
 }
+
+
+@media only screen and (max-width: 425px) {
+    .finalreviewPlussMinusButton {
+        font-size: 24px;
+    }
+}

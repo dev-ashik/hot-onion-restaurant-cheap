@@ -29,7 +29,7 @@ const Foodcheckout = () => {
 
     return (
         <div className={styles.review}>
-          <div className={styles.reviewMiddleDiv}>
+          {/* <div className={styles.reviewMiddleDiv}> */}
             <div className={styles.reviewLeftSide}>
                 <Userdetails></Userdetails>
             </div>
@@ -48,7 +48,7 @@ const Foodcheckout = () => {
                 <h6>Delivery fee $2</h6>
                 <Link to="/delivery" className={styles.placeOrder}>place Order</Link>
             </div>
-          </div>
+          {/* </div> */}
         </div>
     );
 };

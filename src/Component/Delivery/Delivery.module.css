@@ -1,13 +1,13 @@
 .delivery {
-    display: flex;
-    margin: 10px 100px;
+  display: flex;
+  margin: 10px 100px;
   justify-content: center;
 }
 
 .mapImage {
-    width: 540px;
-    height: 540px;
-    margin-right: 50px;
+  width: 540px;
+  height: 540px;
+  margin-right: 50px;
 }
 
 .bike {
@@ -15,16 +15,16 @@
 }
 
 .contactArea {
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgb(238, 236, 236);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(238, 236, 236);
 }
 
 .location {
-    margin: 15px;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: white;
 }
 
 .location p {
@@ -44,8 +44,35 @@
 }
 
 .contactButton button {
-    border: none;
-    padding: 5px 20px;
-    border-radius: 5px;
-    background-color: red;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background-color: red;
+}
+
+@media only screen and (max-width: 425px) {
+  .delivery {
+    display: inherit;
+    width: 590px;
+    /* border: 1px solid red; */
+  }
+
+  .mapImage {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+  }
+
+  .contactButton button {
+    padding: 5px 213px;
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  .bike {
+    height: 120px;
+    width: 150px;
+  }
+  
 }
