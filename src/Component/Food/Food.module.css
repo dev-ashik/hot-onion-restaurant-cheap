@@ -68,3 +68,31 @@
     margin: 20px;
 }
 
+
+@media only screen and (max-width: 425px) {
+    .foodDetailSectain{
+        /* height: 0px; */
+        padding: 0px 0px; 
+    }
+
+    .foodDetailLeft{
+        /* margin: 7px; */
+        margin-left: 95px;
+        margin-right: 22px;
+    }
+
+    .foodDetailImg {
+        margin-left: 5px;
+    }
+    
+    .foodDetailImg img{
+        height: 250px;
+        width: 250px;
+        /* margin-left: 70px; */
+    }
+
+    .restFood{
+        display: flex;
+    }
+    
+}
