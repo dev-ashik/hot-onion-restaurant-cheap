@@ -46,3 +46,14 @@
     color: white !important;
     background-color: red !important;
 }
+
+@media only screen and (max-width: 425px) {
+    .signIn{
+        width: 675px;
+    }
+
+    .signIn input{
+        font-size: 25px;
+        width: 365px;
+    }
+}

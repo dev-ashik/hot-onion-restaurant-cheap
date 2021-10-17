@@ -1,23 +1,31 @@
-.edit-detail{
-    border-bottom: 1px solid gray;
-    margin-bottom: 30px;
+.edit-detail {
+  border-bottom: 1px solid gray;
+  margin-bottom: 30px;
 }
 
-.userDetail input{
-    display: block;
-    background-color: rgb(238, 237, 237);
-    margin: 15px 0;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    width: 370px;
+.userDetail input {
+  display: block;
+  background-color: rgb(238, 237, 237);
+  margin: 15px 0;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  width: 370px;
 }
 
-.error{
-    color: red;
+.error {
+  color: red;
 }
 
 .userDetailsSubmitButton {
-    background-color: red !important;
-    color: white !important;
+  background-color: red !important;
+  color: white !important;
+}
+
+@media only screen and (max-width: 425px) {
+  .userDetail input {
+    font-size: 25px;
+    width: 440px;
+    padding-left: 20px;
+  }
 }

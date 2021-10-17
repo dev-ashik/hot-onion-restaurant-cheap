@@ -1,11 +1,8 @@
 .review{
     margin: 50px;
     height: 600px;
-}
-
-.reviewMiddleDiv {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .reviewLeftSide{
@@ -29,4 +26,21 @@
 .placeOrder:hover {
     text-decoration: none;
     color: white;
+}
+
+
+@media only screen and (max-width: 425px) {
+    .review{
+        display:inherit;
+        width: 662px;
+        height: 750px;
+        margin-left: 145px;
+        
+    }
+    
+    .reviewRightSide{
+        float: left;
+        margin: 20px;
+        margin-bottom: 100px;
+    }
 }

@@ -41,20 +41,46 @@
         height: 250px;
     }
 }
-@media only screen and (max-width: 768px) {
-    .rowUp {
-        /* margin-top: 0; */
+
+
+@media only screen and (max-width: 425px) {
+    .black-footer{
+        font-size: 14px;
+        height: 310px;
+        width: 776px;
+        height: 260px;
     }
     
-    .rowDown {
-        /* margin-top: 35px; */
+    .logoImage {
+        width: 330px;
+    }
+    
+    .firstArea {
+        width: 160px;
     }
 
-    .text {
-        /* font-size: 12px;
-        margin-bottom: 0; */
+    .secondArea {
+        width: 160px;
     }
-    .black-footer{
-        width: 776px;
+
+    .rowUp {
+        margin-bottom: 60px;
     }
+    
+    .footerCopy {
+        width: 350px;
+    }
+
+    .policy {
+        width: 115px;
+    }
+
+    .terms {
+        width: 115px;
+    }
+
+    .pricing {
+        width: 115px;
+    }
+
 }
