@@ -45,7 +45,7 @@ const Food = (props) => {
 
   // const [cart, setCart] = useState([]);
   const handleAddFood = () => {
-    const toBeAddKey = props.food.id;
+    const toBeAddKey = props.food.key;
     props.food.quantity = count; // add a new property quantity
 
     // this is function for store data in local and section storage.
@@ -88,7 +88,7 @@ const Food = (props) => {
       </div>
 
       <div className={styles.foodDetailImg}>
-        <img src={photo} alt="food photo" height="400" width="400" />
+        <img src={photo} alt="food photo" height="200" width="200" />
       </div>
     </div>
   );

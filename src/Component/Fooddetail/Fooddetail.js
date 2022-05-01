@@ -1,17 +1,27 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import fakefoodMenu from "../../fakedata/Fakefood";
 import Food from "../Food/Food";
 import styles from "./Fooddetail.module.css";
 
 const Fooddetail = () => {
-  let { foodId } = useParams();
-  const foundFood = fakefoodMenu.find((fd) => fd.id === foodId);
-  const restFood = fakefoodMenu.filter((fd) => fd.id !== foundFood.id && fd.category === foundFood.category);
+  const [foodData, setFoodData] = useState({});
+  let { foodKey } = useParams();
+
+  useEffect(()=>{
+    fetch('http://localhost:5000/food/'+foodKey)
+    .then(res => res.json())
+    .then(food => setFoodData(food))
+  }, [])
   
 
-  const [fCategory, setFCategory] = useState(foundFood.category);
-//   const [foodId, setFoodId] = useState("");
+  // const foodData = fakefoodMenu.find((fd) => fd.key === foodKey);
+  const restFood = fakefoodMenu.filter((fd) => fd.key !== foodData.id && fd.category === foodData.category);
+  
+
+  const [fCategory, setFCategory] = useState(foodData.category);
+//   const [foodKey, setfoodKey] = useState("");
   const allLunch = fakefoodMenu.filter(
     (fakefood) => fakefood.category === fCategory
   );
@@ -30,7 +40,7 @@ const Fooddetail = () => {
 
   return (
     <div className={styles.fooddetails}>
-      <Food food={foundFood} restFood={restFood}></Food>
+      <Food food={foodData} restFood={restFood}></Food>
     </div>
   );
 };

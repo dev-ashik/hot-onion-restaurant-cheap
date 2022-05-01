@@ -18,6 +18,7 @@ const Header = () => {
           <Navbar.Text>
             <div className="login-signUp">
               <Link to="/">Foods</Link>
+              <Link to="/addfood">Add Foods</Link>
               <Link to="/login">Login</Link>
               <Link className="userName">{loggedInUser.name}</Link>
               <Link

@@ -1,5 +1,6 @@
-
-var fakefoodMenu =[
+import React from 'react';
+import './AddFood.css';
+var food =[
     {
         key: "b1",
         foodName : "Breakfast-1",
@@ -148,5 +149,26 @@ var fakefoodMenu =[
     },
 ]; 
 
+const AddFood = () => {
 
-export default fakefoodMenu;
+    const AddFoods = () => {
+        // console.log("clicked");
+        fetch('http://localhost:5000/addFood', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+            body: JSON.stringify(food[17]),
+        })
+        // .then(res => res.json())
+        // .then(data => console.log(data))
+    }
+
+    return (
+        <div>
+            <button onClick="">add food</button>
+        </div>
+    );
+};
+
+export default AddFood;

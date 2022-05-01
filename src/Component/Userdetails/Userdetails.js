@@ -1,11 +1,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./Userdetails.css";
+import {Link} from 'react-router-dom';
 
-const Userdetails = () => {
+const Userdetails = ({shipmentInfo}) => {
   const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = (data) => console.log(data);
-
+  const onSubmit = (data) => {
+    shipmentInfo(data);
+  }
   return (
     <form className="userDetail" onSubmit={handleSubmit(onSubmit)}>
       <h5 className="edit-detail">Edit Delivery Detils</h5>
@@ -48,8 +50,9 @@ const Userdetails = () => {
       {errors.instructor && (
         <span className="error">instructor is required</span>
       )}
-
-      <input className="userDetailsSubmitButton" type="submit" value="Save & Continue"/>
+      <Link to="/delivery" >
+        <input className="userDetailsSubmitButton" type="submit" value="Save & Continue"/>
+      </Link>
     </form>
   );
 };

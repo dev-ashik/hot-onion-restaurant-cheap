@@ -2,28 +2,21 @@ import React, {useState} from 'react';
 import fakefoodMenu from '../../fakedata/Fakefood';
 import styles from "./Menu.module.css"
 
-const Menu = ({setCurrentfood, fCategory, setFCategory}) => {
+const Menu = ({setCurrentDisplayfood, foodCategory, setFoodCategory, selectedFood}) => {
     
-//   const [fCategory, setFCategory] = useState("lunch");
+//   const [foodCategory, setfoodCategory] = useState("lunch");
 //   const [foodId, setFoodId] = useState("");
 //   const allLunch = fakefoodMenu.filter(
-//     (fakefood) => fakefood.category === fCategory
+//     (fakefood) => fakefood.category === foodCategory
 //   );
 //   const lunchMenu = allLunch.slice(0, 6);
 //   const [currentfood, setCurrentfood] = useState(lunchMenu);
 
-  const selectedFood = (foodCategory) => {
-    const sellectedCurrentFood = fakefoodMenu.filter(
-      (fakefood) => fakefood.category === foodCategory
-    );
-    const foods = sellectedCurrentFood.slice(0, 6);
-    setCurrentfood(foods);
-    setFCategory(foodCategory);
-  };
+  
     return (
         <div>
             <div className={styles.foodListAncor}>
-        {fCategory === "breakfast" ? (
+        {foodCategory === "breakfast" ? (
           <button
             onClick={() => selectedFood("breakfast")}
             style={{ borderBottom: "1px solid red", color: "red" }}
@@ -39,7 +32,7 @@ const Menu = ({setCurrentfood, fCategory, setFCategory}) => {
             Breakfirst
           </button>
         )}
-        {fCategory === "lunch" ? (
+        {foodCategory === "lunch" ? (
           <button
             onClick={() => selectedFood("lunch")}
             style={{ borderBottom: "1px solid red", color: "red" }}
@@ -55,7 +48,7 @@ const Menu = ({setCurrentfood, fCategory, setFCategory}) => {
             Lunch
           </button>
         )}
-        {fCategory === "dinner" ? (
+        {foodCategory === "dinner" ? (
           <button
             onClick={() => selectedFood("dinner")}
             style={{ borderBottom: "1px solid red", color: "red" }}

@@ -3,12 +3,12 @@ import styles from "./Currentfood.module.css";
 import { Link } from "react-router-dom";
 
 const Currentfood = (props) => {
-  const { foodName, detail, prise, id, photo } = props.foods;
+  const { foodName, detail, prise, key, photo } = props.foods;
   // console.log(photo);
 
   return (
     <>
-      <Link to={"/food/" + id}>
+      <Link to={"/food/"+key}>
         <section className={styles.foodCard}>
           <div className={styles.cardImageDiv}>
             <img src={photo} className={styles.cardImgTop} alt="food" />
