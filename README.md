@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## site photo
+
+![name-of-you-image](./src/images/hot-onion-restaurent-cheap-cover.jpg)
+
 ## Available Scripts
 
 In the project directory, you can run:
