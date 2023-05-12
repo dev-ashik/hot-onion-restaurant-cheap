@@ -1,7 +1,6 @@
 import React from "react";
 import Currentfood from "../Currentfood/Currentfood";
 import styles from "./Foodmenu.module.css";
-import { Link } from "react-router-dom";
 
 const Foodmenu = ({ currentDisplayfood }) => {
 
